@@ -3,7 +3,7 @@ let endYear = parseInt(prompt('Enter the second year:'));
 
 let leapYears = [];
 
-for (let year = startYear; year < endYear+1; year++) {
+for (let year = startYear; year <= endYear; year++) {
     let isLeap = false;
     if (year % 4 === 0) {
         if (year % 100 !== 0) {
