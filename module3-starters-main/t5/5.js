@@ -94,16 +94,32 @@ const picArray = [
 
 const picSection = document.querySelector('#pictures');
 
-for (let i = 0; i < 9; i++) {
-  let html =
-    `<article class="card">
-      <h2>${picArray[i]['title']}</h2>
-      <figure>
-        <img src="${picArray[i]['image']['medium']}" alt="${picArray[i]['title']}">
-        <figcaption>${picArray[i]['caption']}</figcaption>
-      </figure>
-      <p>${picArray[i]['description']}</p>
-    </article>`;
+for (let i = 0; i < picArray.length; i++) {
+  let article = document.createElement('article');
+  article.classList.add('card');
 
-  picSection.innerHTML += html;
+  // heading
+  let heading = document.createElement('h2');
+  heading.innerHTML = picArray[i].title;
+  
+  // figure
+  let figure = document.createElement('figure');
+  let image = document.createElement('img');
+  image.src = picArray[i].image.medium;
+  image.alt = picArray[i].title;
+  let figcaption = document.createElement('figcaption');
+  figcaption.innerHTML = picArray[i].caption;
+  figure.appendChild(image);
+  figure.appendChild(figcaption);
+
+  // description
+  let desc = document.createElement('p');
+  desc.innerHTML = picArray[i].description;
+
+  // append elements to article
+  article.appendChild(heading);
+  article.appendChild(figure);
+  article.appendChild(desc);
+
+  picSection.appendChild(article);
 }
