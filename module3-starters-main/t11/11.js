@@ -127,3 +127,14 @@ for (let i = 0; i < picArray.length; i++) {
   // append to pictures
   picSection.appendChild(article);
 }
+
+let articles = document.querySelectorAll('article');
+for (let article of articles) {
+  article.addEventListener('click', function() {
+    // add image to dialog
+    // open modal
+    let dialog = document.querySelector('dialog');
+    
+    dialog.showModal();
+  });
+}
