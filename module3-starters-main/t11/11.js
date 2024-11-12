@@ -123,15 +123,14 @@ for (let i = 0; i < picArray.length; i++) {
   article.appendChild(heading);
   article.appendChild(figure);
   article.appendChild(desc);
+  
+  // click to open modal
+  article.addEventListener('click', function() {
+    let dialog = document.querySelector('dialog');
+    document.querySelector('dialog img').src = picArray[i].image.large;
+    dialog.showModal();
+  });
 
   // append to pictures
   picSection.appendChild(article);
-}
-
-let articles = document.querySelectorAll('article');
-for (let article of articles) {
-  article.addEventListener('click', function() {
-    // add (correct!) image to dialog
-    // open modal
-  });
 }
