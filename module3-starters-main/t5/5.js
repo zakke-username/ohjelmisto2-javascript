@@ -95,31 +95,35 @@ const picArray = [
 const picSection = document.querySelector('#pictures');
 
 for (let i = 0; i < picArray.length; i++) {
-  let article = document.createElement('article');
-  article.classList.add('card');
-
   // heading
   let heading = document.createElement('h2');
   heading.innerHTML = picArray[i].title;
   
-  // figure
-  let figure = document.createElement('figure');
+  // figure image
   let image = document.createElement('img');
   image.src = picArray[i].image.medium;
   image.alt = picArray[i].title;
+  
+  // figure caption
   let figcaption = document.createElement('figcaption');
   figcaption.innerHTML = picArray[i].caption;
+  
+  // figure
+  let figure = document.createElement('figure');
   figure.appendChild(image);
   figure.appendChild(figcaption);
-
+  
   // description
   let desc = document.createElement('p');
   desc.innerHTML = picArray[i].description;
-
-  // append elements to article
+  
+  // article
+  let article = document.createElement('article');
+  article.classList.add('card');
   article.appendChild(heading);
   article.appendChild(figure);
   article.appendChild(desc);
 
+  // append to pictures
   picSection.appendChild(article);
 }
