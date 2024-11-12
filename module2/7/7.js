@@ -3,7 +3,6 @@ function rollDice(sides) {
 }
 
 let numSides = parseInt(prompt('Enter the number of sides in your dice:'));
-let results = [];
 while (true) {
     let roll = rollDice(numSides)
     document.querySelector('#dice-results').innerHTML += `<li>${roll}</li>`;

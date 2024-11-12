@@ -8,6 +8,10 @@ function even(arr) {
     return output;
 }
 
-let exampleArray = [1,2,3,4,5,6];
-console.log(exampleArray);
-console.log(even(exampleArray));
+let exampleArray = [];
+for (let i = 0; i < 8; i++) {
+    exampleArray.push(Math.floor(Math.random() * 10));
+}
+let evenArray = even(exampleArray);
+console.log(`Original array: ${exampleArray}`);
+console.log(`Even numbers: ${evenArray}`);
