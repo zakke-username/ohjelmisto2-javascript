@@ -131,10 +131,7 @@ for (let i = 0; i < picArray.length; i++) {
 let articles = document.querySelectorAll('article');
 for (let article of articles) {
   article.addEventListener('click', function() {
-    // add image to dialog
+    // add (correct!) image to dialog
     // open modal
-    let dialog = document.querySelector('dialog');
-    
-    dialog.showModal();
   });
 }
