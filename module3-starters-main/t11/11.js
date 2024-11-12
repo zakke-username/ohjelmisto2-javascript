@@ -125,10 +125,15 @@ for (let i = 0; i < picArray.length; i++) {
   article.appendChild(desc);
   
   // click to open modal
+  let dialog = document.querySelector('dialog');
   article.addEventListener('click', function() {
-    let dialog = document.querySelector('dialog');
     document.querySelector('dialog img').src = picArray[i].image.large;
     dialog.showModal();
+  });
+
+  // click span to close modal
+  document.querySelector('dialog span').addEventListener('click', function() {
+    dialog.close();
   });
 
   // append to pictures
