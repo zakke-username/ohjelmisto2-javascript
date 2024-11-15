@@ -7,4 +7,4 @@ trigger.addEventListener('mouseenter', function() {
 
 trigger.addEventListener('mouseleave', function() {
     target.src = 'img/picA.jpg'; 
- });
+});

@@ -1,0 +1,16 @@
+#results {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* #results article {
+    margin: 2rem;
+    padding: 1rem;
+} */
+
+#results article img {
+    display: block;
+    float: left;
+}
